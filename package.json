@@ -8,12 +8,17 @@
     "start": "node back-end/server.js",
     "server": "nodemon back-end/server.js",
     "client": "npm start --prefix front-end",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "data:import": "node back-end/seeder.js",
+    "data:destroy": "node back-end/seeder.js -d"
   },
   "author": "Clément GARCIN",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.4.3"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
